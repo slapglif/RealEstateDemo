@@ -1,4 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+live demo at https://real-demo.ai-smith.net/
 ![image](https://github.com/user-attachments/assets/d85fe6c7-0c30-446c-880c-95bd9de1da33)
 ![image](https://github.com/user-attachments/assets/1c95794e-1f73-4393-8e4e-961df220f836)
 ![image](https://github.com/user-attachments/assets/a6af6452-f34f-406d-9cee-905a18e92dfe)
