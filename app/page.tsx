@@ -7,7 +7,7 @@ import { Building2, ChevronRight, Coins, Home, LineChart, Menu, X } from 'lucide
 import Link from 'next/link'
 import Image from 'next/image'
 
-export function BlockPage() {
+export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
