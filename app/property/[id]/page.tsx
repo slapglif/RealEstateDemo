@@ -8,7 +8,8 @@ import Image from 'next/image'
 import { FractionalOwnershipSlider } from '@/components/fractional-ownership-slider'
 
 export default function PropertyDetail({ params }: { params: { id: string } }) {
-  const property = properties.find(p => p.id === parseInt(params.id))
+  const id = React.use(params).id
+  const property = properties.find(p => p.id === parseInt(id))
 
   if (!property) {
     return <div className="min-h-screen bg-[#0B1120] text-gray-100 p-8">
