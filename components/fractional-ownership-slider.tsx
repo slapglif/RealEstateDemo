@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card"
 interface FractionalOwnershipSliderProps {
   tokenPrice: number
   totalTokens: number
-  propertyValue: number
   cryptoSymbol: string
   cryptoPrice: number
 }
@@ -15,7 +14,6 @@ interface FractionalOwnershipSliderProps {
 export function FractionalOwnershipSlider({
   tokenPrice,
   totalTokens,
-  propertyValue,
   cryptoSymbol,
   cryptoPrice
 }: FractionalOwnershipSliderProps) {
