@@ -3,23 +3,14 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { properties } from '@/lib/properties-data'
 import Image from 'next/image'
 import { FractionalOwnershipSlider } from '@/components/fractional-ownership-slider'
 import { ChevronLeft } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { properties, type Property } from '@/lib/properties-data'
 
 interface PropertyDetailProps {
   id: string
-}
-
-interface Property {
-  id: number
-  title: string
-  location: string
-  price: number
-  roi: number
-  image: string
 }
 
 export function PropertyDetail({ id }: PropertyDetailProps) {

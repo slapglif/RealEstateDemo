@@ -33,13 +33,15 @@ export function HeroCarousel() {
               className="embla__slide relative flex-[0_0_100%] min-w-0 h-full"
               style={{ flex: '0 0 100%' }}
             >
-              <Image
-                src={src}
-                alt={`Property ${index + 1}`}
-                fill
-                className="object-cover transition-transform duration-[1.5s] scale-[1.05] group-data-[active=true]:scale-100"
-                priority={index === 0}
-              />
+              <div className="absolute inset-0 md:inset-x-0">
+                <Image
+                  src={src}
+                  alt={`Property ${index + 1}`}
+                  fill
+                  className="object-cover object-center"
+                  priority={index === 0}
+                />
+              </div>
             </div>
           ))}
         </div>

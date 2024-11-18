@@ -1,7 +1,11 @@
 'use client'
 
 import React from 'react'
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogTitle 
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -16,9 +20,12 @@ export function SignInModal({ isOpen, onClose }: SignInModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] bg-gray-800/90 backdrop-blur-lg text-white border-gray-700">
+        <DialogTitle className="text-2xl font-bold text-center">
+          Sign In
+        </DialogTitle>
+        
         <div className="grid gap-6">
           <div className="space-y-2 text-center">
-            <h2 className="text-2xl font-bold">Sign In</h2>
             <p className="text-gray-400">Choose your preferred sign in method</p>
           </div>
           

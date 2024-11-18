@@ -3,7 +3,7 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { properties } from '@/app/properties/page'
+import { properties, type Property } from '@/lib/properties-data'
 import Image from 'next/image'
 import { FractionalOwnershipSlider } from '@/components/fractional-ownership-slider'
 import { ChevronLeft } from 'lucide-react'
@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation'
 
 export function PropertyDetailClient({ id }: { id: string }) {
   const router = useRouter()
-  const property = properties.find(p => p.id === parseInt(id))
+  const property = properties.find((p: Property) => p.id === parseInt(id))
 
   if (!property) {
     return <div className="min-h-screen bg-[#0B1120] text-gray-100 p-8">
@@ -37,6 +37,7 @@ export function PropertyDetailClient({ id }: { id: string }) {
               alt={property.title}
               fill
               className="object-cover"
+              priority
             />
           </div>
           <CardContent className="p-6">

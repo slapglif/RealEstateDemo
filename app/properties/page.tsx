@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -9,7 +11,7 @@ export default function PropertiesPage() {
   return (
     <div className="min-h-screen bg-[#0B1120] text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold mb-8">Available Properties</h1>
+        <h1 className="text-3xl font-bold mb-8 text-white">Available Properties</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {properties.map((property) => (
             <Card key={property.id} className="overflow-hidden bg-gray-700/50 border-gray-600">
