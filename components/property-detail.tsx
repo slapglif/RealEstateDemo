@@ -7,7 +7,8 @@ import Image from 'next/image'
 import { FractionalOwnershipSlider } from '@/components/fractional-ownership-slider'
 import { ChevronLeft } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import { properties, type Property } from '@/lib/properties-data'
+import { properties } from '@/lib/properties-data'
+import type { Property } from '@/lib/properties-data'
 
 interface PropertyDetailProps {
   id: string
@@ -15,12 +16,15 @@ interface PropertyDetailProps {
 
 export function PropertyDetail({ id }: PropertyDetailProps) {
   const router = useRouter()
-  const property = properties.find((p: Property) => p.id === parseInt(id))
+  const propertyId = parseInt(id)
+  const property = properties.find((p: Property) => p.id === propertyId)
 
   if (!property) {
-    return <div className="min-h-screen bg-[#0B1120] text-gray-100 p-8">
-      <h1 className="text-2xl font-bold">Property not found</h1>
-    </div>
+    return (
+      <div className="min-h-screen bg-[#0B1120] text-gray-100 p-8">
+        <h1 className="text-2xl font-bold text-white">Property not found</h1>
+      </div>
+    )
   }
 
   return (

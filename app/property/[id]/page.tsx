@@ -1,16 +1,24 @@
 import { Suspense } from 'react'
 import { PropertyDetail } from '@/components/property-detail'
+import { Metadata } from 'next'
 
-interface PageProps {
+type Props = {
   params: Promise<{ id: string }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }
 
-export default async function PropertyDetailPage({ params }: PageProps) {
-  const { id } = await params
+export const metadata: Metadata = {
+  title: 'Property Detail',
+}
+
+const PropertyDetailPage = async ({ params }: Props) => {
+  const resolvedParams = await params
   
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <PropertyDetail id={id} />
+      <PropertyDetail id={resolvedParams.id} />
     </Suspense>
   )
 }
+
+export default PropertyDetailPage
